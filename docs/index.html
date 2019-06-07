@@ -63,17 +63,17 @@
 <a href="#surprisinglytidy" class="anchor"></a>surprisinglytidy</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of surprisinglytidy is to make <code>xaringan</code> presentations a little easier to tweak and more flexible, including extending the functionality of CSS with <a href="https://sass-lang.com/">Sass</a>. It’s still very much in development.</p>
+<p>The goal of surprisinglytidy is to make <a href="https://github.com/yihui/xaringan" title="xaringan"><code>xaringan</code></a> presentations a little easier to tweak and more flexible, including extending the functionality of CSS with <a href="https://sass-lang.com/" title="Sass">Sass</a>. It’s still very much in development.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p><code>surprisinglytidy</code> is not yet available on <a href="https://CRAN.R-project.org">CRAN</a>. You can install it with <code>devtools</code>:</p>
+<p><code>surprisinglytidy</code> is not yet available on <a href="https://CRAN.R-project.org" title="CRAN">CRAN</a>. You can install it with <code>devtools</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"surprisinglytidy"</span>)</code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p><code>knitr</code> has 5 options that can be really handy for fine-grained control of <code>R</code> output:</p>
+<p><code>knitr</code> has 5 options to add classes to <code>R</code> output:</p>
 <ul>
 <li><code>class.source</code></li>
 <li><code>class.output</code></li>
@@ -81,18 +81,19 @@
 <li><code>class.warning</code></li>
 <li><code>class.error</code></li>
 </ul>
-<p>Unfortunately, they have at least 2 drawbacks here.</p>
-<p>First none of these work well with <code>xaringan</code>. They set the class using <a href="https://pandoc.org/">Pandoc</a> syntax, which is not recognized by <a href="https://github.com/gnab/remark/wiki">remark.js</a>:</p>
+<p>These can make for some <a href="https://www.garrickadenbuie.com/blog/knitr-custom-class-output/" title="classes">really beautiful output</a> when wielded with nuance and finesse.</p>
+<p>Unfortunately, they have at least 2 drawbacks for <a href="https://github.com/yihui/xaringan" title="xaringan"><code>xaringan</code></a> slides.</p>
+<p>First <a href="https://github.com/yihui/xaringan/issues/169" title="classes in xaringan">none of these work well with <code>xaringan</code></a>. They set the class using <a href="https://pandoc.org/" title="Pandoc">Pandoc</a> syntax, which is not recognized by <a href="https://github.com/gnab/remark/wiki" title="remark.js">remark.js</a>:</p>
 <div class="sourceCode"><pre class="sourceCode R"><code class="sourceCode r"><span class="st">```</span><span class="dt">{class1 class2}</span>
 <span class="dt">text here</span>
 <span class="st">```</span></code></pre></div>
-<p>Second, <code>class.output</code> does not add classes to <a href="https://twitter.com/xieyihui/status/1136333313340256257?s=20">plots</a>.</p>
-<p>If, instead of using the traditional <code>xaringan</code> template (File –&gt; New File –&gt; R Markdown –&gt; From Template –&gt; Ninja Presentation), you use the Tidy Presentation template from this package, It will handle all those issues for you automatically. There is sample code for adding classes.</p>
+<p>Second, <code>class.output</code> does not add classes to <a href="https://twitter.com/xieyihui/status/1136333313340256257?s=20" title="no plots">plots</a>.</p>
+<p>If, instead of using the traditional <a href="https://github.com/yihui/xaringan" title="xaringan"><code>xaringan</code></a> <a href="https://slides.yihui.name/xaringan/#1" title="Hello Ninja">Hello Ninja</a> template (File –&gt; New File –&gt; R Markdown –&gt; From Template –&gt; Ninja Presentation), you use the Tidy Presentation template from this package, It will handle all those issues for you automatically. There is sample code for adding classes.</p>
 </div>
 <div id="next-steps" class="section level2">
 <h2 class="hasAnchor">
 <a href="#next-steps" class="anchor"></a>Next Steps</h2>
-<p>For now this is all very rudimentary. The presentation template, for example, is merely a copy of <a href="https://yihui.name/">Yihui Xie</a>’s “Hello Ninja” presentation, and the setup code in it is unpolished.</p>
+<p>For now this is all very rudimentary. The presentation template, for example, is merely a copy of <a href="https://yihui.name/" title="Yihui Xie">Yihui Xie</a>’s “Hello Ninja” presentation, and the setup code in it is unpolished.</p>
 <p>Furthermore, I haven’t even gotten to adding Sass functionality, which will be very exciting! But one step at a time. For now the package is up on Github. :)</p>
 <p>Please let me know if you have any questions or requests, either for further development or for stronger documentation.</p>
 <p>Best, Benjamin Wolfe</p>
