@@ -1,0 +1,25 @@
+Package: surprisinglytidy
+Title: Presentations with Sass
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Benjamin",
+           family = "Wolfe",
+           role = c("aut", "cre"),
+           email = "benjamin.e.wolfe@gmail.com",
+           comment = c(ORCID = "0000-0002-4339-9328"))
+Description: Adds some flexibility and functionality to Yihui Xie's Xaringan
+    package, including the ability to compile CSS from Sass.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports: 
+    glue,
+    stringr,
+    dplyr,
+    magrittr,
+    knitr,
+    purrr,
+    xaringan,
+    sass,
+    utils
