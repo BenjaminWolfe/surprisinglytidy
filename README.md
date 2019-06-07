@@ -4,7 +4,7 @@
 <!-- badges: end -->
 
 The goal of surprisinglytidy is to make `xaringan` presentations
-a little easier and more flexible, including extending the functionality
+a little easier to tweak and more flexible, including extending the functionality
 of CSS with [Sass](https://sass-lang.com/).
 It's still very much in development.
 
@@ -31,7 +31,8 @@ control of `R` output:
 Unfortunately, they have at least 2 drawbacks here.
 
 First none of these work well with `xaringan`.
-They set the class using [Pandoc](https://pandoc.org/) syntax:
+They set the class using [Pandoc](https://pandoc.org/) syntax,
+which is not recognized by [remark.js](https://github.com/gnab/remark/wiki):
 
     ```{class1 class2}
     text here

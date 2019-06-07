@@ -63,7 +63,7 @@
 <a href="#surprisinglytidy" class="anchor"></a>surprisinglytidy</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of surprisinglytidy is to make <code>xaringan</code> presentations a little easier and more flexible, including extending the functionality of CSS with <a href="https://sass-lang.com/">Sass</a>. It’s still very much in development.</p>
+<p>The goal of surprisinglytidy is to make <code>xaringan</code> presentations a little easier to tweak and more flexible, including extending the functionality of CSS with <a href="https://sass-lang.com/">Sass</a>. It’s still very much in development.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -82,7 +82,7 @@
 <li><code>class.error</code></li>
 </ul>
 <p>Unfortunately, they have at least 2 drawbacks here.</p>
-<p>First none of these work well with <code>xaringan</code>. They set the class using <a href="https://pandoc.org/">Pandoc</a> syntax:</p>
+<p>First none of these work well with <code>xaringan</code>. They set the class using <a href="https://pandoc.org/">Pandoc</a> syntax, which is not recognized by <a href="https://github.com/gnab/remark/wiki">remark.js</a>:</p>
 <div class="sourceCode"><pre class="sourceCode R"><code class="sourceCode r"><span class="st">```</span><span class="dt">{class1 class2}</span>
 <span class="dt">text here</span>
 <span class="st">```</span></code></pre></div>
