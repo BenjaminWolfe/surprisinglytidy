@@ -14,7 +14,7 @@ It's still very much in development.
 You can install it with `devtools`:
 
 ```r
-devtools::install_github("surprisinglytidy")
+devtools::install_github("BenjaminWolfe/surprisinglytidy")
 ```
 
 ## Example
