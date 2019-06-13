@@ -168,7 +168,7 @@ render_chunk.default <- function(x, options, inline = FALSE, ...) {
 #' }
 render_html_chunk <- function(x, options, inline = FALSE, ...) {
   chunk <- knitr::knit_print(x, options = options, inline = inline, ...)
-  if (!length(options$class.output)) return(chunk)
+  if (is.null(options$class.output)) return(chunk)
 
   chunk[1] <- chunk[1] %>% add_class(options$class.output)
   chunk
@@ -199,7 +199,7 @@ render_html_chunk <- function(x, options, inline = FALSE, ...) {
 #' }
 render_asis_chunk <- function(x, options, inline = FALSE, ...) {
   chunk <- knitr::knit_print(x, options = options, inline = inline, ...)
-  if (!length(options$class.output)) return(chunk)
+  if (is.null(options$class.output)) return(chunk)
 
   class_list <- stringr::str_split("hello world", pattern = " ")[[1]]
   chunk[1] <- paste0(".", class_list, "[") %>%
@@ -241,7 +241,7 @@ render_asis_chunk <- function(x, options, inline = FALSE, ...) {
 #' }
 set_extension <- function(options, prefix = ".", suffix = ".", sep = ".") {
   auto_ext <- knitr:::auto_exts[options$dev]
-  if (!length(options$class.output)) {
+  if (is.null(options$class.output)) {
     options$fig.ext = auto_ext
   } else {
     options$fig.ext <- options$class.output %>%

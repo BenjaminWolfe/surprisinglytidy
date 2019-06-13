@@ -84,7 +84,7 @@ add_dependency <- function(name,
   fullpath <- get_file(file, path, packages, fullpath)
 
   dep <- switch(
-    utils::tail(strsplit(file, "[.]")[[1]], 1),
+    tools::file_ext(file),
     "js" = htmltools::htmlDependency(
       name    = name,
       version = version,
