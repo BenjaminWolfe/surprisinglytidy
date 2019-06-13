@@ -4,8 +4,8 @@
 <!-- badges: end -->
 
 The goal of surprisinglytidy is to make [`xaringan`][9] presentations
-a little easier to tweak and more flexible, including extending the functionality
-of CSS with [Sass][1].
+a little easier to tweak and more flexible,
+including extending the functionality of CSS with [Sass][1].
 It's still very much in development.
 
 ## Installation
@@ -14,7 +14,7 @@ It's still very much in development.
 You can install it with `devtools`:
 
 ```r
-devtools::install_github("surprisinglytidy")
+devtools::install_github("BenjaminWolfe/surprisinglytidy")
 ```
 
 ## Example
